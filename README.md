@@ -54,6 +54,7 @@ For the multi-processor results to spped up the runtime, the result is shown bel
 When using the formula of $speedup = \frac{T_1}{T_p}$ to calculate the speedup of accelerated algorithm, where $T_1$ is the execution time on a single processor and $T_p$ is the execution time on p processors in parallel. The form of estimated sppedup value is shown in the below table:
 
 <div align='center'>
+  
 | Number of processors | Speed up ratio |
 |:---------------------:|:----------------:|
 | 2 | 1.2275 |
@@ -63,6 +64,7 @@ When using the formula of $speedup = \frac{T_1}{T_p}$ to calculate the speedup o
 | 6 | 1.7223 |
 | 7 | 1.7990 |
 | 8 | 1.8164 |
+
 </div>
 
 And the corresponding plot of speedup is shown below:
