@@ -72,3 +72,5 @@ And the corresponding plot of speedup is shown below:
 <div align='center'>
   <img width="492" alt="截屏2024-11-26 18 24 14" src="https://github.com/user-attachments/assets/d5fe0028-7071-4158-a9da-1dbde3892122">
 </div>
+
+**Note**: All expriement are run on a personal laptop MacOS 12.2.1, with CPU of M1, 2020 and RAM of 16GB. The compiler is VSCode 1.71.1 (Universal).
