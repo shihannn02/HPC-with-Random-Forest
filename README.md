@@ -36,6 +36,7 @@ I had checked the `random_forest.py` accuracy result with `from sklearn.ensemble
 
 For the multi-processor results to spped up the runtime, the result is shown below:
 
+<div align='center'>
 | Num. of processors | 1st run | 2nd run | 3rd run | 4th run | 5th run | average |
 |:-------------------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | 1 | 1149.6 | 1127.5 | 1153.8 | 1219.3 | 1197.4 | 1169.52 |
@@ -46,9 +47,11 @@ For the multi-processor results to spped up the runtime, the result is shown bel
 | 6 | 678.2 | 673.3 | 682.1 | 691.9 | 669.7 | 679.04 |
 | 7 | 652.8 | 640.2 | 645.3 | 649.1 | 663.1 | 650.1 |
 | 8 | 647.2 | 643.8 | 639.9 | 642.4 | 646.1 | 643.88 |
+</div>
 
 When using the formula of $speedup = \frac{T_1}{T_p}$ to calculate the speedup of accelerated algorithm, where $T_1$ is the execution time on a single processor and $T_p$ is the execution time on p processors in parallel. The form of estimated sppedup value is shown in the below table:
 
+<div align='center'>
 | Number of processors | Speed up ratio |
 |:---------------------:|:----------------:|
 | 2 | 1.2275 |
@@ -58,6 +61,7 @@ When using the formula of $speedup = \frac{T_1}{T_p}$ to calculate the speedup o
 | 6 | 1.7223 |
 | 7 | 1.7990 |
 | 8 | 1.8164 |
+</div>
 
 And the corresponding plot of speedup is shown below:
 
