@@ -10,21 +10,21 @@ There are 3 files in the folder:
   
   For **decision tree**, It follows the procedure of: 
     
-    1) Calculate information gain. 
-    2) Split the data via finding the best feature based on information gain. 
-    3) Create branches recursivly based on the best feature until every leaf contains only a single category. 
+  1) Calculate information gain. 
+  2) Split the data via finding the best feature based on information gain. 
+  3) Create branches recursivly based on the best feature until every leaf contains only a single category. 
     
   And for **random forest**, It follows the procedure of: 
   
-    1) Bagging. Perform 100 bootstrapping on the data, generate different decision trees, and perform majority-voting on their prediction results. 
-    2) When each node of the decision tree is split, 3 features are randomly selected in the way of non-replacement sampling, and split based on best feature is performed accordingly.
+  1) Bagging. Perform 100 bootstrapping on the data, generate different decision trees, and perform majority-voting on their prediction results. 
+  2) When each node of the decision tree is split, 3 features are randomly selected in the way of non-replacement sampling, and split based on best feature is performed accordingly.
 
 `MPI_random_forest.py` is the implementation of parallel computing based on MPI, accelerating the procedure of generating different subtrees when performing bootstrapping.
 
   The main parallel part in the code is:
 
-    1) First, calculating how many bootstraps should be assigned to a process, and in each process, generated trees accordingly, and then gather all the trees generated into a list in rank 0.
-    2) When calculating how many bootstraps should be assigned to a process, there may appear a situation that bootstrap cannot be assigned to every process without remainders. In this code, for example, there are 100 bootstrap and 7 processes, then I will assign each process with following bootstraps: rank0=14, rank1=14, rank2=14, rank3=14, rank4=14, rank5=15, rank6=15.
+  1) First, calculating how many bootstraps should be assigned to a process, and in each process, generated trees accordingly, and then gather all the trees generated into a list in rank 0.
+  2) When calculating how many bootstraps should be assigned to a process, there may appear a situation that bootstrap cannot be assigned to every process without remainders. In this code, for example, there are 100 bootstrap and 7 processes, then I will assign each process with following bootstraps: rank0=14, rank1=14, rank2=14, rank3=14, rank4=14, rank5=15, rank6=15.
 
   The command for calling different number of processors is:
 
